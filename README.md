@@ -1,10 +1,17 @@
 # EmployeeManagerApp
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+<br>Java Version : 11 
+<br>Springboot Version : 2.6.6
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Backend Server 
+Backend Server runs on `http://localhost:9000/employee` 
+
+## Database 
+MySQL 5 (set credentials on application.properties) 
 
 ## Code scaffolding
 
