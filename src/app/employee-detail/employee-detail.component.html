@@ -1,0 +1,59 @@
+<div class="container">
+<div *ngIf="employee">
+        <form  [formGroup]="employeeForm" (ngSubmit)="saveEmployee()">
+            <div class="form-group row">
+              <label for="name" class="col-sm-2 col-form-label">name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" [(ngModel)]="employee.name" formControlName="name">
+              </div>
+            </div>
+        
+            <div class="form-group row">
+                <label for="email" class="col-sm-2 col-form-label">email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="email" [(ngModel)]="employee.email" formControlName="email">
+                </div>
+              </div>
+        
+              <div class="form-group row">
+                <label for="name" class="col-sm-2 col-form-label">jobTitle</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="jobTitle" [(ngModel)]="employee.jobTitle" formControlName="jobTitle">
+                </div>
+              </div>
+        
+              <div class="form-group row">
+                <label for="name" class="col-sm-2 col-form-label">phone</label>
+                <div class="col-sm-10">
+                  <input type="number" class="form-control" id="phone" [(ngModel)]="employee.phone" formControlName="phone">
+                </div>
+              </div>
+              <button class="button" type="submit">Save </button>
+        
+          </form>
+</div>
+    <div *ngIf="employee ==undefined">
+        <form  [formGroup]="employeeForm" (ngSubmit)="addEmployee(name.value,email.value)">
+            <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label">name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" #name id="name" formControlName="name">
+            </div>
+            </div>
+        
+            <div class="form-group row">
+                <label for="email" class="col-sm-2 col-form-label">email</label>
+                <div class="col-sm-10">
+                <input type="email" class="form-control" #email id="email" formControlName="email">
+                </div>
+            </div>
+            <button class="button" type="submit">Add employee </button>
+
+        
+        </form>
+    </div>
+    <br>
+    <br>
+    <button type="button" (click)="goBack()">Go back</button>
+</div>
+
